@@ -4,61 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
-    <title>Семестровая работа</title>
+    <title>Семестровая работа (Главная - Портфолио)</title>
 </head>
 <body>
-    <div class="page-container">
+    <div class="page">
         <header class="header">
-            <h1>Хэдер</h1>
+            <h1 class = "header__title">Хэдер для моего Портфолио</h1>
         </header>
         <nav class="nav">
-            <ul class="nav-list">
-                <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
-                <li class="nav-item"><a class="nav-link" href="pages/news.html">Новости</a></li>
-                <li class="nav-item"><a class="nav-link" href="pages/goods.html">Товары</a></li>
-                <li class="nav-item"><a class="nav-link" href="pages/contacts.html">Контакты</a></li>
-                <li class="nav-item"><a class="nav-link" href="pages/practics.html">Практики</a></li>
+            <ul class="nav__list">
+                <li class="nav__item nav__item--active"><a class="nav__link" href="index.html">Главная</a></li>
+                <li class="nav__item"><a class="nav__link" href="pages/news.html">Новости</a></li>
+                <li class="nav__item"><a class="nav__link" href="pages/goods.html">Товары</a></li>
+                <li class="nav__item"><a class="nav__link" href="pages/contacts.html">Контакты</a></li>
+                <li class="nav__item"><a class="nav__link" href="pages/practics.html">Практики</a></li>
             </ul>
         </nav>
         <main class="content">
-            <article class="profile-header">
-                <h1 class="profile-title">Информация об авторе</h1>
-                <img class="profile-photo" src="images/photo.jpg" alt="фото автора">
-                <h2 class="profile-name">Гузаирова Ольга Ринатовна</h2>
-                <p class="profile-group">ЭФБО-05-24</p>
-            </article>
-            <section class="about me">
-                <p>Обо мне: Я родился в Москве в 70-м на краю города. Глупость рано ударила в голову. В четыре активно ругался. Потом школа, форма, драки, клей. Так я становился сильней. Воровал деньги в раздевалке.</p>
-            </section>
-            <section class="skill container">
-                <h2>Мои навыки</h2>
-                <div class="skill-grid">
-                    <div class="skill-tag">навык 1</div>
-                    <div class="skill-tag">навык 2</div>
-                    <div class="skill-tag">навык 3</div>
-                    <div class="skill-tag">навык 4</div>
+            <section class="profile">
+                <div calss = "profile__card">
+                    <h1 class="profile__title">Информация об авторе</h1>
+                    <img class="profile__photo" src="images/photo.jpg" alt="фото автора">
+                    <div class = "profile__info">
+                        <h2 class="profile__name">Гузаирова Ольга Ринатовна</h2>
+                        <p class="profile__group">ЭФБО-05-24</p>
+                    </div>
                 </div>
             </section>
-            <section class="experience-section">
-                <h2 class="section-title">Мой опыт работы</h2>
-                <div class="experience-grid">
-                    <article class="experience-card">
-                        <h3 class="experience-title">Опыт 1</h3>
-                        <p class="experience-desc">Работал фантазёром. Сочинял и праздновал.</p>
-                    </article>
-                    <article class="experience-card">
-                        <h3 class="experience-title">Опыт 2</h3>
-                        <p class="experience-desc">Работал воровством. Воровал и продавал.</p>
-                    </article>
-                    <article class="experience-card">
-                        <h3 class="experience-title">Опыт 3</h3>
-                        <p class="experience-desc">Работал рэпером. Читал и пел.</p>
-                    </article>
+            <section class="about">
+                <h1 class = "about__title">Информация обо мне</h1>
+                <div class = "about__info">
+                    <p class = "about__text">Студент, обучаюсь программированию. Не все всегда получется, но я буду продолжать стараться. Изучаю: C#, HTML, JavaScript.
+                        Надеюсь, что не разочарую вас этой работой.
+                    </p>
+                </div>
+            </section>
+            <section class="skills">
+                <h2 class="skills__title">Мои навыки</h2>
+                <div class="skills__list">
+                    <div class = "skill skill--html">
+                        <span class="skill__name">HTML</span>
+                    </div>
+                    <div class = "skill skill--c">
+                        <span class="skill__name">C#</span>
+                    </div>
+                    <div class = "skill skill--js">
+                        <span class="skill__name">JavaScript</span>
+                    </div>
+                </div>
+            </section>
+            <section class="experience">
+                <h2 class="experience__title">Мой опыт в разработке</h2>
+                <div class="experience__list">
+                    <div class="experience-card">
+                        <h3 class="experience-card__title">Личный сайт</h3>
+                        <p class="experience-card__desc">Сайт-портфолио на CSS и HTML.</p>
+                    </div>
+                    <div class="experience-card">
+                        <h3 class="experience-card__title">Сдача первого курсача</h3>
+                        <p class="experience-card__desc">Разработанное консольное приложение на qt.</p>
+                    </div>
+                    <div class="experience-card">
+                        <h3 class="experience-card__title">Участие в конкурсе с простым приложением</h3>
+                        <p class="experience-card__desc">Разработанное простое приложение для генерации паролей на python.</p>
+                    </div>
                 </div>
             </section>
         </main>
         <footer class="footer">
-            <p>Футер</p>
+            <p class = "footer__text">&copy; 2025 Сайт для семестровой работы. Все права защищены</p>
         </footer>
     </div>
 </body>

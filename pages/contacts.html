@@ -7,30 +7,38 @@
     <title>Контакты</title>
 </head>
 <body>
-    <div class="page-container">
+    <div class="page">
         <header class="header">
-            <h1>Хэдер</h1>
+            <h1 class = "header__title">Хэдер для моего Портфолио</h1>
         </header>
         <nav class="nav">
-            <ul class="nav-list">
-                <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
-                <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
-                <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
-                <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
-                <li class="nav-item"><a class="nav-link" href="practics.html">Практики</a></li>
+            <ul class="nav__list">
+                <li class="nav__item"><a class="nav__link" href="../index.html">Главная</a></li>
+                <li class="nav__item"><a class="nav__link" href="news.html">Новости</a></li>
+                <li class="nav__item"><a class="nav__link" href="goods.html">Товары</a></li>
+                <li class="nav__item nav__item--active"><a class="nav__link" href="contacts.html">Контакты</a></li>
+                <li class="nav__item"><a class="nav__link" href="practics.html">Практики</a></li>
             </ul>
         </nav>
         <main class="contacts">
-            <h1 class="break_n">А вот наши контакты, но вы все равно не дозвонитесь до нас</h1>
-            <section>
-                <article class="experience-card">
-                    <h2 class="break_n">вот наша 100% настоящая почта:</h2>
-                    <p class="smp_txt">lolkek@gmail.com</p>
-                </article>
-                <article class="experience-card">
-                    <h2 class="break_n">адрес:</h2>
-                    <p class="smp_txt">г. Набережные Челны, ул. Трех переулков, д. 7, стр. 8</p>
-                </article>
+            <h1 class="contacts__title">А вот наши контакты</h1>
+            <section class = "contacts__list">
+                <div class="contacts-card">
+                    <h2 class="contacts-card__name">вот наша 100% настоящая почта:</h2>
+                    <p class="contacts-card__text">lolkek@gmail.com</p>
+                </div>
+                <div class="contacts-card">
+                    <h2 class="contacts-card__name">адрес:</h2>
+                    <p class="contacts-card__text">г. Набережные Челны, ул. Трех переулков, д. 7, стр. 8</p>
+                </div>
+                <div class = "contacts-card">
+                    <h2 class="contacts-card__name">Телефон для частных лиц</h2>
+                    <p class="contacts-card__text">+7-(960)-888-50-44</p>
+                </div>
+                <div class="contacts-card">
+                    <h2 class="contacts-card__name">Телефон для других компаний</h2>
+                    <p class="contacts-card__text">+7-(888)-555-55-55</p>
+                </div>
                 <button class="c-button" onclick="document.getElementById('contactModal').showModal()">Написать мне</button>
                 <dialog id="contactModal"> 
                     <div class="modal-header"> 
@@ -74,7 +82,7 @@
             </section>
         </main>
         <footer class="footer">
-            <p>Футер</p>
+            <p class="footer__text">&copy; 2025 Сайт для семестровой работыю Все права защищены</p>
         </footer>
     </div>
     <script> 
@@ -97,7 +105,7 @@
 
             console.log('Данные формы:', data); 
 
-            alert('Спасибо. Мы свяжемся с вами в ближайшее время, но это не точно uwu.'); 
+            alert('Спасибо. Мы свяжемся с вами в ближайшее время uwu.'); 
 
             contactModal.close(); 
             contactModal.returnValue = 'success';

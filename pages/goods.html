@@ -7,36 +7,72 @@
     <title>Товары</title>
 </head>
 <body>
-    <div class="page-container">
+    <div class="page">
         <header class="header">
-            <h1>Хэдер</h1>
+            <h1 class = "header__title">Хэдер для моего Портфолио</h1>
         </header>
         <nav class="nav">
-            <ul class="nav-list">
-                <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
-                <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
-                <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
-                <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
-                <li class="nav-item"><a class="nav-link" href="practics.html">Практики</a></li>
+            <ul class="nav__list">
+                <li class="nav__item"><a class="nav__link" href="../index.html">Главная</a></li>
+                <li class="nav__item"><a class="nav__link" href="news.html">Новости</a></li>
+                <li class="nav__item nav__item--active"><a class="nav__link" href="goods.html">Товары</a></li>
+                <li class="nav__item"><a class="nav__link" href="contacts.html">Контакты</a></li>
+                <li class="nav__item"><a class="nav__link" href="practics.html">Практики</a></li>
             </ul>
         </nav>
         <main class="goods">
-            <h1 class="break_n">Разные товары</h1>
-            <section>
-                <h2 class="break_n">Товар 1</h2>
-                <img class="profile-photo" src="../images/goods_1.jpg" alt="товарчик 1">
-                <p class="smp_txt">цена за этот кусок - 25 000 тыс. руб</p>
-                <h2 class="break_n">Товар 2</h2>
-                <img class="profile-photo" src="../images/goods_2.jpg" alt="товар 2">
-                <p class="smp_txt">цена за это выше - 30 000 тыс. руб (мне уже покупать это расхотелось)</p>
-                <h2 class="break_n">Товар 3</h2>
-                <img class="profile-photo" src="../images/goods_3.jpg" alt="товар 3 owo">
-                <p class="smp_txt">цена за это нечто - 100 000 тыс. руб (не покупайте это пж)</p>
+            <h1 class="goods__title">Разные товары</h1>
+            <section class="goods-card">
+                <div class="goods-card__info">
+                    <h2 class="goods-card__name">Товар 1</h2>
+                    <img class="goods-card__photo" src="../images/goods_1.jpg" alt="товарчик 1">
+                    <p class="goods-card__text">цена за этот кусок - 25 000 тыс. руб</p>
+                    <button class="goods__button" onclick="changeStyle(this)">Выбрать</button>
+                </div>
+                <div class="goods-card__info">
+                    <h2 class="goods-card__name">Товар 2</h2>
+                    <img class="goods-card__photo" src="../images/goods_2.jpg" alt="товар 2">
+                    <p class="goods-card__text">цена за это выше - 30 000 тыс. руб</p>
+                    <button class="goods__button" onclick="changeStyle(this)">Выбрать</button>
+                </div>
+                <div class="goods-card__info">
+                    <h2 class="goods-card__name">Товар 3</h2>
+                    <img class="goods-card__photo" src="../images/goods_3.jpg" alt="товар 3 owo">
+                    <p class="goods-card__discount">цена за это нечто - 100 000 тыс. руб</p>
+                    <button class="goods__button" onclick="changeStyle(this)">Выбрать</button>
+                </div>
+            </section>
+            <section class="goods-card">
+                <div class="goods-card__cart">
+                    <h2 class = "goods-card__text">Информация о скидках на сайте</h2>
+                    <p class = "goods-card__text">Внимание! Ни одна скидка не является перманентной. Максимальная скидка на товары - 10%. Продожительность - 2 дня.</p>
+                </div>
+                <div class="goods-card_full_cart">
+                    <h2 class="goods-card__text">Корзина</h2>
+                    <p class = "goods-card__text">Следите за обновлениями. Будет добавлена корзина (или нет)</p>
+                </div>
             </section>
         </main>
         <footer class="footer">
-            <p>Футер</p>
+            <p class="footer__text">&copy; 2025 Сайт для семестровой работыю Все права защищены</p>
         </footer>
     </div>
+    <script>
+        function changeStyle(button){
+            const container = button.closest('.goods-card__info');
+            if (!container){
+                alert("container is not found");
+                return;
+            }
+            const target = container.querySelector('.goods-card__photo');
+            if (target){
+                target.classList.toggle("goods__chosen");
+                alert('Товар выбран. Спасибо');
+            }
+            else{
+                alert("target is not found");
+            }
+        }
+    </script>
 </body>
 </html>
