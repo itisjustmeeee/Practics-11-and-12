@@ -42,10 +42,10 @@
                     <button class="goods__button" onclick="changeStyle(this)">Выбрать</button>
                 </div>
             </section>
-            <section class="goods-card">
+            <section class="goods-card_warnings">
                 <div class="goods-card__cart">
                     <h2 class = "goods-card__text">Информация о скидках на сайте</h2>
-                    <p class = "goods-card__text">Внимание! Ни одна скидка не является перманентной. Максимальная скидка на товары - 10%. Продожительность - 2 дня.</p>
+                    <p class = "goods-card__text">Внимание! Ни одна скидка не является перманентной. Максимальная скидка на товары - 10%. Продолжительность - 2 дня.</p>
                 </div>
                 <div class="goods-card_full_cart">
                     <h2 class="goods-card__text">Корзина</h2>
@@ -56,22 +56,42 @@
         <footer class="footer">
             <p class="footer__text">&copy; 2025 Сайт для семестровой работыю Все права защищены</p>
         </footer>
+        <dialog id = "messageDialog">
+            <p id = "dialogMessage"></p>
+            <button onclick="closeDialog()" class = 'closeBtn'>Закрыть</button>
+        </dialog>
     </div>
     <script>
         function changeStyle(button){
             const container = button.closest('.goods-card__info');
-            if (!container){
-                alert("container is not found");
+            const dialog = document.getElementById('messageDialog');
+            const messageDialog = document.getElementById('dialogMessage');
+            if (!container) {
+                dialogMessage.textContent = "контейнер не найден";
+                dialog.showModal();
                 return;
             }
-            const target = container.querySelector('.goods-card__photo');
-            if (target){
-                target.classList.toggle("goods__chosen");
-                alert('Товар выбран. Спасибо');
+            const text = container.querySelector(".goods-card__text, .goods-card__discount");
+            if (text){
+                if (text.classList.contains('goods__chosen')){
+                    text.classList.remove('goods__chosen');
+                    dialogMessage.textContent = 'Выбор отменен';
+                }
+                else {
+                    text.classList.add('goods__chosen');
+                    dialogMessage.textContent = "Товар выбран. Спасибо!";
+                }
+                dialog.showModal();
             }
-            else{
-                alert("target is not found");
+            else {
+                dialogMessage.textContent = "Текст не найден";
+                dialog.showModal();
             }
+        }
+
+        function closeDialog() {
+            const dialog = document.getElementById('messageDialog');
+            dialog.close();
         }
     </script>
 </body>
