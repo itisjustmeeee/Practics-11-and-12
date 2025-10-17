@@ -40,7 +40,7 @@
                     <p class="contacts-card__text">+7-(888)-555-55-55</p>
                 </div>
                 <button class="c-button" onclick="document.getElementById('contactModal').showModal()">Написать мне</button>
-                <dialog id="contactModal"> 
+                <dialog id="contactModal">
                     <div class="modal-header"> 
                         <h2>Формя для связи. Просьба: заполните все поля ниже!</h2> 
                     </div> 
@@ -79,6 +79,10 @@
                         </form> 
                     </div> 
                 </dialog>
+                <dialog id = "successDialog">
+                    <p id = "successMessage"></p>
+                    <button onclick="closeSuccessDialog()" class="closeBtn">Закрыть</button>
+                </dialog>
             </section>
         </main>
         <footer class="footer">
@@ -89,7 +93,7 @@
         const contactModal = document.getElementById('contactModal');
         function submitForm() { 
             const form = document.getElementById('feedbackForm'); 
-            const formData = new FormData(form); 
+            const formData = new FormData(form);
 
             if (!form.checkValidity()) { 
                 form.reportValidity(); 
@@ -103,15 +107,24 @@
                 message: formData.get('message') 
             }; 
 
-            console.log('Данные формы:', data); 
+            console.log('Данные формы:', data);
 
-            alert('Спасибо. Мы свяжемся с вами в ближайшее время uwu.'); 
+            const successDialog = document.getElementById("successDialog");
+            const successMessage = document.getElementById("successMessage");
+            successMessage.textContent = "Спасибо. Мы свяжемся с вами в ближайшее время uwu.";
+            successDialog.showModal();
 
             contactModal.close(); 
             contactModal.returnValue = 'success';
 
             form.reset(); 
         }
+
+        function closeSuccessDialog() {
+            const successDialog = document.getElementById("successDialog");
+            successDialog.close();
+        }
+
         contactModal.addEventListener('click', function(event) { 
             if (event.target === this) { 
                 this.close();

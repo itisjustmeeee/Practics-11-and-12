@@ -240,50 +240,52 @@ nav {
 }
 
 .contacts {
-    background-color: var(--color-light);
+    background: linear-gradient(45deg, rgb(175, 235, 255), rgb(132, 132, 254));
     padding: var(--space-md);
     box-shadow: var(--shadow);
 }
 
 .contacts__title{
-    color: #0868de;
+    color: var(--color-text);
     margin-bottom: var(--space-md);
-    font-size: medium;
-    text-decoration: dashed;
+    font-size: 30px;
+    text-decoration: underline;
 }
 
 .contacts__list {
     display: flex;
     flex-direction: column;
-    gap: var(--space-sm);
+    gap: var(--space-md);
+    height: 100%;
+    justify-content: space-between;
 }
 
 .contacts-card {
-    background-color: var(--color-light);
-    padding: var(--space-sm);
+    background: linear-gradient(150deg, rgb(28, 219, 28), rgb(80, 80, 234));
+    padding: var(--space-md);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
-    border-left: 5px dashed #33aabb;
-    transition:  transform 0.1s;
+    border-left: 5px solid #9271ff;
+    border-right: 5px solid #9271ff;
 }
 
 .contacts-card:hover {
-    transform: translate3d(-4px);
-    background: linear-gradient(60deg, #e1adff, #9833af);
+    background: linear-gradient(60deg, #5e6cd7, #3874e5);
 }
 
 .contacts-card__name {
-    color: #1D1D2E;
-    font-size: medium;
+    color: var(--color-main);
+    font-size: large;
 }
 
 .contacts-card__text {
-    font-size: small;
-    font-style: normal;
+    font-size: 18px;
+    margin-top: var(--space-sm);
+    color: var(--color-light);
 }
 
 .goods {
-    background: linear-gradient(45deg, rgb(175, 235, 255), rgb(132, 132, 254));;
+    background: linear-gradient(45deg, rgb(175, 235, 255), rgb(132, 132, 254));
     padding: var(--space-md);
 }
 
@@ -297,16 +299,30 @@ nav {
 
 .goods-card {
     display: flex;
-    flex-direction: column;
+    gap: var(--space-sm);
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.goods-card_warnings {
+    display: flex;
+    gap: var(--space-sm);
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
 }
 
 .goods-card__info {
     padding: var(--space-md);
-    margin-bottom: var(--space-lg);
+    margin-left: var(--space-md);
+    margin-bottom: var(--space-md);
     border-radius: 3px solid var(--color-accent);
     background: linear-gradient(75deg, grey, rgb(243, 243, 88));
     border-radius: var(--radius);
     box-shadow: var(--shadow);
+    height: auto;
+    width: 400px;
 }
 
 .goods-card__name {
@@ -315,8 +331,8 @@ nav {
 }
 
 .goods-card__photo {
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     border-radius: 0.5%;
     border: 1px solid dodgerblue;
 }
@@ -350,23 +366,25 @@ nav {
 
 .goods-card__cart {
     font-weight: bold;
-    border: 2px solid red;
+    border: 4px solid red;
     color: black;
     text-decoration-thickness: 50%;
+    padding: var(--space-sm);
 }
 
 .goods-card_full_cart {
     text-align: center;
     font-weight: bold;
-    border: 2px solid purple;
+    border: 4px solid purple;
     color: var(--color-main);
     text-decoration-thickness: 70%;
+    padding: var(--space-sm);
 }
 
 .goods__chosen {
     color: #1D1D2E;
     text-decoration: line-through;
-    text-shadow: 2px 2px 2px rgba(109, 95, 237, 0.4);
+    text-shadow: 3px 3px 3px rgba(109, 95, 237, 0.5);
     text-rendering: auto;
 }
 
@@ -424,16 +442,16 @@ nav {
 }
 
 .practics {
-    background: var(--color-white);
+    background: linear-gradient(45deg, rgb(175, 235, 255), rgb(132, 132, 254));
     padding: var(--space-lg);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
 }
 
-.practics__title {
-    color: #1D1D2E;
+.practics_title {
+    color: var(--color-main);
     margin-bottom: var(--space-md);
-    font-size: medium;
+    font-size: 30px;
+    text-decoration: underline;
+    text-decoration-style: wavy;
 }
 
 .practics-card {
@@ -444,9 +462,29 @@ nav {
 
 .practics-card__info {
     padding: var(--space-md);
-    border-left: 3px solid var(--color-accent);
-    background: linear-gradient(30deg, grey, darkgrey);
+    border-top: 5px solid greenyellow;
+    border-bottom: 5px solid greenyellow;
+    background: linear-gradient(30deg, rgb(246, 160, 160), rgb(249, 235, 162));
     border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.practics-card__name {
+    color: var(--color-text);
+    margin-bottom: var(--space-md);
+    text-decoration: overline;
+}
+
+.practics-card__image {
+    height: 300px;
+    width: 400px;
+    border: 1px solid #0524bd;
+}
+
+.practics-card__text {
+    color: var(--color-main);
+    font-size: var(--space-md);
+    text-shadow: 3px 3px 2px rgb(0, 0, 0, 0.5);
 }
 
 @media (max-width: 800px){
@@ -471,14 +509,16 @@ nav {
 .c-button {
     padding: 10px 20px;
     font-size: 16px;
+    height: 45px;
+    width: 200px;
     cursor: pointer;
-    border: 2px solid #1b2bd9;
-    background-color: #1b2bd9;
+    border: 2px solid #082cde;
+    background: linear-gradient(30deg, #082cde, #71a7e9);
     color: white;
     border-radius: 5px;
 }
 .c-button:hover {
-    background-color: #0868de;
+    background: linear-gradient(30deg, #0524bd, #6493cc);
 }
 .c-button:focus {
     outline: none;
@@ -509,23 +549,36 @@ dialog::backdrop {
     animation: fadeIn 0.3s ease; 
 } 
 
-dialog { 
-    border: none; 
-    border-radius: 12px; 
-    padding: 0; 
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); 
-    animation: slideIn 0.3s ease; 
+dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid #d9a31b; 
+    border-radius: 8px; 
+    padding: 20px;
+    background: linear-gradient(20deg, red, orange);
+    box-shadow: 0px 8px 10px rgba(240, 217, 13, 0.7); 
     max-width: 500px; 
     width: 90vw; 
     max-height: 90vh; 
     overflow-y: auto; 
-} 
+}
+
+.closeBtn {
+    background: linear-gradient(50deg, pink, purple);
+    color: var(--color-light);
+    border: 2px solid rgb(99, 0, 99);
+    border-radius: 3px;
+    padding: 8px;
+    margin-top: 10px;
+}
 
 .modal-header { 
-    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); 
-    color: white; 
+    background: linear-gradient(150deg, #65ef58, #34495e); 
+    color: #ffffff; 
     padding: 1.5rem; 
-    border-radius: 12px 12px 0 0; 
+    border-radius: 12px; 
     margin: 0; 
 } 
 
@@ -592,8 +645,8 @@ dialog {
 } 
 
 .btn-primary { 
-    background: linear-gradient(135deg, #efd358 0%, #d84545 100%); 
-    color: white; 
+    background: linear-gradient(135deg, #65ef58 0%, #45c4d8 100%); 
+    color: #2c3e50; 
 } 
 
 .btn-primary:hover { 
@@ -602,13 +655,12 @@ dialog {
 } 
 
 .btn-secondary { 
-    background: #f8f9fa; 
+    background: linear-gradient(135deg, #65ef58 0%, #45c4d8 100%); 
     color: #2c3e50; 
-    border: 2px solid #e9ecef; 
 } 
 
 .btn-secondary:hover { 
-    background: #abc1d6; 
+    background: linear-gradient(135deg, #45a83c 0%, #3698a7 100%); 
 } 
 
 .required { 
