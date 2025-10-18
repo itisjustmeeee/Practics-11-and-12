@@ -15,10 +15,10 @@ function toggleTheme() {
     titles.forEach(title => title.classList.toggle('dark-theme_title'));
     texts.forEach(text => text.classList.toggle('dark-theme_text'));
 
-    // Сохраняем состояние темы в localStorage
+
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
 
-    // Обновляем текст кнопки на всех страницах
+
     document.querySelectorAll('.theme-toggle').forEach(button => {
         button.textContent = isDark ? 'Светлая тема' : 'Тёмная тема';
     });
