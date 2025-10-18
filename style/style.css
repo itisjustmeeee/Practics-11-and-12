@@ -1,12 +1,12 @@
 :root{
     --color-main: #2c3e50;
-    --color-accent: #3498db;
+    --color-accent: #4a67cf;
     --color-light: #ecf0f1;
     --color-dark: #34495e;
     --color-text: #2c3e50;
     --color-white: #ffffff;
 
-    --shadow: 3px 3px 3px rgb(0, 0, 0, 0.5);
+    --shadow: 3px 3px 5px rgb(0, 0, 0, 0.5);
 
     --radius: 8px;
 
@@ -88,7 +88,7 @@ nav {
 
 .profile {
     margin-bottom: var(--space-lg);
-    background: linear-gradient(45deg, rgb(175, 235, 255), rgb(132, 132, 254));
+    background: linear-gradient(45deg, rgb(38, 55, 187), rgb(81, 226, 222));
     border-radius: var(--radius);
     box-shadow: var(--shadow);
 }
@@ -124,7 +124,7 @@ nav {
 }
 
 .about {
-    background: linear-gradient(45deg, rgb(175, 235, 255), rgb(132, 132, 254));
+    background: linear-gradient(45deg, rgb(61, 102, 207), rgb(218, 108, 86));
     padding: var(--space-lg);
     margin-bottom: var(--space-lg);
     border-radius: var(--radius);
@@ -180,15 +180,15 @@ nav {
 }
 
 .skill--html {
-    background: linear-gradient(55deg, rgb(178, 137, 239), rgb(224, 63, 63));
+    background: linear-gradient(30deg, rgb(130, 82, 202), rgb(216, 32, 32));
 }
 
 .skill--c {
-    background: linear-gradient(50deg, #65a5d3, #2e6ed5);
+    background: linear-gradient(50deg, #59a3d8, #1153bc);
 }
 
 .skill--js {
-    background: linear-gradient(35deg, #3fb759, #bfbea2);
+    background: linear-gradient(35deg, #3fb759, #afaa18);
 }
 
 .experience {
@@ -210,7 +210,7 @@ nav {
 }
 
 .experience-card {
-    background: linear-gradient(45deg, rgb(175, 235, 255), rgb(132, 132, 254));
+    background: linear-gradient(125deg, rgb(55, 226, 81), rgb(114, 81, 248));
     padding: auto;
     border-radius: var(--radius);
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
@@ -240,7 +240,6 @@ nav {
 }
 
 .contacts {
-    background: linear-gradient(45deg, rgb(175, 235, 255), rgb(132, 132, 254));
     padding: var(--space-md);
     box-shadow: var(--shadow);
 }
@@ -285,7 +284,6 @@ nav {
 }
 
 .goods {
-    background: linear-gradient(45deg, rgb(175, 235, 255), rgb(132, 132, 254));
     padding: var(--space-md);
 }
 
@@ -318,7 +316,7 @@ nav {
     margin-left: var(--space-md);
     margin-bottom: var(--space-md);
     border-radius: 3px solid var(--color-accent);
-    background: linear-gradient(75deg, grey, rgb(243, 243, 88));
+    background: linear-gradient(50deg, rgb(94, 114, 200), rgb(239, 129, 70));
     border-radius: var(--radius);
     box-shadow: var(--shadow);
     height: auto;
@@ -422,7 +420,7 @@ nav {
 }
 
 .news-card__text {
-    color: var(--color-dark);
+    color: var(--color-main);
     text-align: center;
     margin-bottom: var(--space-sm);
 }
@@ -442,7 +440,6 @@ nav {
 }
 
 .practics {
-    background: linear-gradient(45deg, rgb(175, 235, 255), rgb(132, 132, 254));
     padding: var(--space-lg);
 }
 
@@ -693,4 +690,53 @@ dialog {
     .btn { 
         width: 100%;
     }
+}
+
+.dark-theme_back {
+    background: linear-gradient(30deg, rgb(15, 15, 15), rgb(97, 95, 95));
+}
+
+.dark-theme_page {
+    background: linear-gradient(30deg, rgb(39, 39, 39), rgb(77, 75, 75));
+}
+
+.dark-theme_header {
+    background: linear-gradient(45deg, rgb(32, 31, 31), rgb(85, 85, 85));
+}
+
+.dark-theme_menu {
+    background: linear-gradient(45deg, rgb(75, 75, 75), rgb(52, 49, 49));
+}
+
+.dark-theme_main {
+    background: linear-gradient(100deg, rgb(12, 12, 12), rgb(65, 66, 66));
+}
+
+.dark-theme_title {
+    color: var(--color-light);
+}
+
+.dark-theme_text {
+    color: var(--color-white);
+}
+
+.theme-toggle {
+    background: linear-gradient(30deg, #3874e5, #9271ff);
+    padding: var(--space-sm);
+    margin: var(--space-sm);
+    width: 180px;
+    color: var(--color-light);
+    border: 1px solid #3874e5;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    float: left;
+}
+
+.theme-toggle:hover {
+    background: linear-gradient(30deg, #2b5ab0, #624bad);
+}
+
+body, .header, .nav, h1, h2 {
+    transition: background 0.3 ease, color 0.3 ease;
 }
