@@ -3,79 +3,275 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/style.css">
-    <title>Семестровая работа (Главная - Портфолио)</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <style>
+        body {
+            background: url('/images/fon_for_pages.gif');
+            background-repeat: repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+        .bg-gradient-custom {
+            background: linear-gradient(30deg, #edd7d7, #bc9bf2);
+        }
+        .bg-gradient-for-html {
+            background: linear-gradient(30deg, red, purple);
+        }
+        .bg-gradient-for-js {
+            background: linear-gradient(30deg, lightblue, green);
+        }
+        .bg-gradient-for-py {
+            background: linear-gradient(30deg, blue, orange);
+        }
+    </style>
 </head>
-<body>
-    <div class="page">
-        <header class="header">
-            <h1 class = "header__title">Хэдер для моего Портфолио</h1>
+<body class = "bg-light">
+    <div class="container-fluid p-0">
+        <header class="bg-primary text-white py-4">
+            <div class = "container">
+                <div class = "row align-items-center">
+                    <div class = "col">
+                        <h1 class = "h3 mb-1">Хэдер для моего Портфолио</h1>
+                        <p class = "mb-0 opacity-75">Студент разработчик</p>
+                    </div>
+                    <div class = "col auto">
+                        <span class = "badge bg-light text-primary">ЭФБО-05-24</span>
+                    </div>
+                </div>
+            </div>
         </header>
-        <nav class="nav">
-            <ul class="nav__list">
-                <li class="nav__item nav__item--active"><a class="nav__link" href="index.html">Главная</a></li>
-                <li class="nav__item"><a class="nav__link" href="pages/news.html">Новости</a></li>
-                <li class="nav__item"><a class="nav__link" href="pages/goods.html">Товары</a></li>
-                <li class="nav__item"><a class="nav__link" href="pages/contacts.html">Контакты</a></li>
-                <li class="nav__item"><a class="nav__link" href="pages/practics.html">Практики</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class = "container">
+                <button class = "navbar-toggler" type = "button" data-bs-toggle = "collapse" data-bs-target="#navbarNav">
+                    <span class = "navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id = "navbarNav">
+                    <ul class = "navbar-nav">
+                        <li class = "nav-item">
+                            <a class="nav-link active" href="index.html">
+                                <i class="bi bi-house me-1"></i>Главная
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/news.html">
+                                <i class="bi bi-folder-fill me-1"></i>Новости
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/goods.html">
+                                <i class="bi bi-bookmark-check-fill me-1"></i>Товары
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/contacts.html">
+                                <i class="bi bi-person-circle me-1"></i>Контакты
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href = "pages/practics.html">
+                                <i class="bi bi-tools me-1"></i>Практички
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
-        <main class="content">
-            <section class="profile">
-                <div calss = "profile__card">
-                    <h1 class="profile__title">Информация об авторе</h1>
-                    <img class="profile__photo" src="images/photo.jpg" alt="фото автора">
-                    <div class = "profile__info">
-                        <h2 class="profile__name">Гузаирова Ольга Ринатовна</h2>
-                        <p class="profile__group">ЭФБО-05-24</p>
+        <main class="container my-4">
+            <section class="mb-5">
+                <div class = "card shadow">
+                    <div class="card-body p-4">
+                        <div class = "row align-items-center">
+                            <div class="col-md-3 text-center mb-3 mb-md-0">
+                                <img src="images/photo.jpg" alt="мое фото" class="img-fluid" style="width: 200px; height: 200px; object-fit: cover;">
+                            </div>
+                            <div class="col-md-9">
+                                <h2 class=" card-title h4 text-primary text-center">Гузаирова Ольга Ринатовна</h2>
+                                <p class="card-text text-muted mb-2 text-center">
+                                    <i class = "bi bi-bookmark-check-fill text-primary"></i>
+                                    Студент группы ЭФБО-05-24
+                                </p>
+                                <p class="card-text text-center">
+                                    Факультет информационных технолгий, специальность "Фуллстэк разработка"
+                                </p>
+                                <div class="d-flex gap-2 flex-wrap justify-content-center">
+                                    <span class="badge bg-primary">HTML</span>
+                                    <span class="badge bg-success">C#</span>
+                                    <span class="badge bg-info">JavaScript</span>
+                                    <span class="badge bg-warning">Python</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
-            <section class="about">
-                <h1 class = "about__title">Информация обо мне</h1>
-                <div class = "about__info">
-                    <p class = "about__text">Студент, обучаюсь программированию. Не все всегда получется, но я буду продолжать стараться. Изучаю: C#, HTML, JavaScript.
-                        Надеюсь, что не разочарую вас этой работой.
-                    </p>
-                </div>
-            </section>
-            <section class="skills">
-                <h2 class="skills__title">Мои навыки</h2>
-                <div class="skills__list">
-                    <div class = "skill skill--html">
-                        <span class="skill__name">HTML</span>
+            <section class="mb-5">
+                <div class="card shadow">
+                    <div class="card-header bg-light">
+                        <h3 class="card-title h5 mb-0 text-center">
+                            <i class="bi bi-person-circle text-primary"></i>
+                            Информация обо мне
+                        </h3>
                     </div>
-                    <div class = "skill skill--c">
-                        <span class="skill__name">C#</span>
-                    </div>
-                    <div class = "skill skill--js">
-                        <span class="skill__name">JavaScript</span>
+                    <div class="card-body">
+                        <p class="card-text">
+                            Студент, обучаюсь программированию. Не все всегда получется, но я буду продолжать стараться. Раньше активно осваивались навыки python разраобтки.
+                            Надеюсь, что не разочарую вас этой работой. На данный момент, кроме этого сайта, больше никаких серьезных проектов в портфолио не присутствует. Но в двльнейшем планируются расширения в опыте и навыках.
+                        </p>
+                        <p class="card-text">
+                            Изучаю: C#, HTML, JavaScript, Python.
+                        </p>
                     </div>
                 </div>
             </section>
-            <section class="experience">
-                <h2 class="experience__title">Мой опыт в разработке</h2>
-                <div class="experience__list">
-                    <div class="experience-card">
-                        <h3 class="experience-card__title">Личный сайт</h3>
-                        <p class="experience-card__desc">Сайт-портфолио на CSS и HTML.</p>
+            <section class="mb-5">
+                <div class="card shadow-lg">
+                    <div class="card-header bg-light text-center">
+                        <h3 class="card-title h5 mb-0">
+                            <i class="bi bi-tools text-primary"></i>
+                            Мой опыт в разработке
+                        </h3>
                     </div>
-                    <div class="experience-card">
-                        <h3 class="experience-card__title">Сдача первого курсача</h3>
-                        <p class="experience-card__desc">Разработанное консольное приложение на qt.</p>
-                    </div>
-                    <div class="experience-card">
-                        <h3 class="experience-card__title">Участие в конкурсе с простым приложением</h3>
-                        <p class="experience-card__desc">Разработанное простое приложение для генерации паролей на python.</p>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <span>C#</span>
+                                        <span class="text-primary">50%</span>
+                                    </div>
+                                    <div class="progress" style="height: 10px;">
+                                        <div class="progress-bar bg-gradient-custom" style="width: 50%;"></div>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <span>HTML</span>
+                                        <span class="text-primary">25%</span>
+                                    </div>
+                                    <div class="progress" style="height: 10px;">
+                                        <div class="progress-bar bg-gradient-for-html" style="width: 25%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <span>JavaScript</span>
+                                        <span class="text-primary">25%</span>
+                                    </div>
+                                    <div class="progress" style="height: 10px;">
+                                        <div class="progress-bar bg-gradient-for-js" style="width: 25%;"></div>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <span>Python</span>
+                                        <span class="text-primary">55%</span>
+                                    </div>
+                                    <div class="progress" style="height: 10px;">
+                                        <div class="progress-bar bg-gradient-for-py" style="width: 55%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <button class="theme-toggle" onclick="toggleTheme()">Темная тема</button>
             </section>
+            <section class="mb-5">
+                <div class="card shadow">
+                    <div class="card-header bg-light">
+                        <h3 class="card-title h5 mb-0 text-center">
+                            <i class="bi bi-folder-fill text-primary"></i>
+                            Мой опыт в разработке
+                        </h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <img src="images/gif_for_site.gif" class="card-img-top mx-auto d-block" alt="сайт_анимация" style="height: auto; width: auto; object-fit: cover;">
+                                        <h5 class="card-title text-center">Личный сайт</h5>
+                                        <p class="card-text small text-muted">Сайт-портфолио на CSS, HTML и Bootstrap. На данный момент существует рабочая версия сайта, на котором вы сейчас находитесь.</p>
+                                        <div class="mb-2">
+                                            <span class="badge bg-primary">HTML</span>
+                                            <span class="badge bg-primary">CSS</span>
+                                            <span class="badge bg-primary">Bootstrap</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <img src="images/kursach_gif.gif" class="card-img-top mx-auto d-block" alt="курсач_анимация" style="height: 200px; width: 200px; object-fit: cover;">
+                                        <h5 class="card-title text-center">Сдача первого курсача</h5>
+                                        <p class="card-text small text-muted">Разработанное консольное приложение с использованием C++ и QT. Была удачно защищена в конце 1 курса (2024 год)</p>
+                                        <div class="mb-2">
+                                            <span class="badge bg-success">C++</span>
+                                            <span class="badge bg-success">QT</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <img src="images/project_gif.gif" class="card-img-top mx-auto d-block" alt="конкурс_анимация" style="height: 200px; width: 300px; object-fit: cover;">
+                                        <h5 class="card-title text-center">Участие в конкурсе с простым приложением</h5>
+                                        <p class="card-text small text-muted">Участие в конкурсе от РТУ МИРЭА - "Золотая дюжина". На этом курсе было разработано приложение для генерации авролей на python с простым интерфейсом.</p>
+                                        <div class="mb-2">
+                                            <span class="badge bg-warning">Python</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <button class="btn btn-primary btn-outline-warning" onclick="toggleTheme()">
+                <span id="themeText">Тема</span>
+            </button>
         </main>
-        <footer class="footer">
-            <p class = "footer__text">&copy; 2025 Сайт для семестровой работы. Все права защищены</p>
+        <footer class="bg-dark text-white py-4 mt-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="mb-0">&copy; 2025 Сайт для семестровой работы. Все права защищены</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <a href="pages/contacts.html" class="text-white text-decoration-underline me-3">Контакты</a>
+                        <a href="#" class="text-white text-decoration-overline">Политика конфиденциальности</a>
+                    </div>
+                </div>
+            </div>
         </footer>
     </div>
-    <script src="scripts/script.js"></script>
+    <script>
+        const themes = [
+            { name: "Светлая", gif: "images/fon_for_pages.gif" },
+            { name: "Тёмная",  gif: "images/fon_for_dark_mode.gif"  }
+        ];
+
+        let currentTheme = 0;
+
+        function toggleTheme() {
+            currentTheme = (currentTheme + 1) % themes.length;
+
+            document.body.style.backgroundImage = `url('${themes[currentTheme].gif}')`;
+
+            document.getElementById('themeText').textContent = `Тема: ${themes[currentTheme].name}`;
+        }
+
+        window.onload = () => {
+            document.body.style.backgroundImage = `url('${themes[0].gif}')`;
+            document.getElementById('themeText').textContent = `Тема: ${themes[0].name}`;
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

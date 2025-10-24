@@ -5,6 +5,7 @@
     --color-dark: #34495e;
     --color-text: #2c3e50;
     --color-white: #ffffff;
+    --color-light_white: rgb(211, 211, 211);
 
     --shadow: 3px 3px 5px rgb(0, 0, 0, 0.5);
 
@@ -31,7 +32,11 @@ body {
 .page {
     max-width: 1200px;
     margin: 0 auto;
-    background: linear-gradient(45deg, rgb(132, 145, 245), rgb(140, 190, 236));
+    background-image:url(../images/fon_for_pages.gif);
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     min-height: 100vh;
     text-align: center;
 }
@@ -43,7 +48,7 @@ body {
 }
 
 .header__title {
-    font-size: large;
+    font-size: 24px;
     text-align: center;
     color: whitesmoke;
 }
@@ -67,6 +72,7 @@ nav {
     display: block;
     color: var(--color-light);
     text-decoration: solid;
+    font-size: 18px;
     transition: background-color 0.3s;
 }
 
@@ -88,13 +94,13 @@ nav {
 
 .profile {
     margin-bottom: var(--space-lg);
-    background: linear-gradient(45deg, rgb(38, 55, 187), rgb(81, 226, 222));
+    background: linear-gradient(125deg, rgb(41, 175, 61), rgb(89, 62, 194));
     border-radius: var(--radius);
     box-shadow: var(--shadow);
 }
 
 .profile__title {
-    color: var(--color-dark);
+    color: var(--color-light);
     line-height: 1.6;
 }
 
@@ -106,24 +112,29 @@ nav {
 }
 
 .profile__photo {
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     border-radius: 0.5%;
     border: 2px solid rgb(17, 114, 226);
 }
 
 .profile__name {
     font-size: 1.4rem;
-    color: var(--color-main);
+    color: var(--color-light_white);
     margin-bottom: var(--space-sm);
 }
 
 .profile__group {
-    color: var(--color-main);
+    color: var(--color-light_white);
     font-size: 1.2rem;
 }
 
 .about {
+    max-width: 1200px;
+    margin-bottom: var(--space-lg);
+}
+
+.about_card {
     background: linear-gradient(45deg, rgb(61, 102, 207), rgb(218, 108, 86));
     padding: var(--space-lg);
     margin-bottom: var(--space-lg);
@@ -132,16 +143,18 @@ nav {
 }
 
 .about__title {
-    color: var(--color-main);
+    color: var(--color-light);
     margin-bottom: auto;
     font-size: 1.6rem;
     text-decoration: underline;
     text-decoration-style: solid;
+    margin-bottom: var(--space-md);
 }
 
 .about__text {
     font-size: 1.1rem;
-    color: var(--color-main);
+    color: var(--color-light_white);
+    text-align: justify;
 }
 
 .skills {
@@ -149,7 +162,7 @@ nav {
 }
 
 .skills__title {
-    color: var(--color-main);
+    color: var(--color-white);
     margin-bottom: var(--space-md);
     text-decoration: underline;
     text-decoration-style: solid;
@@ -175,12 +188,12 @@ nav {
 }
 
 .skill:hover {
-    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 1px 6px 10px rgba(0, 0, 0, 0.5);
     transform: translateY(-5px);
 }
 
 .skill--html {
-    background: linear-gradient(30deg, rgb(130, 82, 202), rgb(216, 32, 32));
+    background: linear-gradient(30deg, rgb(83, 15, 184), rgb(228, 24, 24));
 }
 
 .skill--c {
@@ -191,12 +204,16 @@ nav {
     background: linear-gradient(35deg, #3fb759, #afaa18);
 }
 
+.skill--python {
+    background: linear-gradient(40deg, rgb(165, 3, 165), rgb(41, 40, 40));
+}
+
 .experience {
     margin-bottom: var(--space-lg);
 }
 
 .experience__title {
-    color: var(--color-main);
+    color: var(--color-light);
     text-decoration: underline;
     text-decoration-style: solid;
     margin-bottom: var(--space-md);
@@ -210,31 +227,34 @@ nav {
 }
 
 .experience-card {
-    background: linear-gradient(125deg, rgb(55, 226, 81), rgb(114, 81, 248));
+    background: linear-gradient(125deg, rgb(41, 175, 61), rgb(89, 62, 194));
     padding: auto;
     border-radius: var(--radius);
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-    border-left: 3px solid rgb(101, 177, 235);
-    border-bottom: 3px solid rgb(101, 177, 235);
-    transition: transform 0.2s;
+    border-left: 4px solid rgb(27, 70, 225);
+    border-bottom: 4px solid rgb(27, 70, 225);
+    transition: transform 0.2s ease;
 }
 
 .experience-card:hover {
-    transform: translateY(-15px);
+    transform: translateY(-10px);
+    box-shadow: 1px 6px 10px rgba(0, 0, 0, 0.5);
 }
 
 .experience-card__title {
-    color: var(--color-main);
+    color: var(--color-white);
 }
 
 .experience-card__desc {
-    color: var(--color-text);
+    color: var(--color-light);
     margin-bottom: var(--space-sm);
+    text-align: justify;
+    margin: var(--space-sm);
 }
 
 .footer {
     background: rgb(66, 112, 220);
-    color: #1D1D2E;
+    color: var(--color-light_white);
     text-align: center;
     padding: var(--space-sm);
 }
@@ -245,7 +265,7 @@ nav {
 }
 
 .contacts__title{
-    color: var(--color-text);
+    color: var(--color-light);
     margin-bottom: var(--space-md);
     font-size: 30px;
     text-decoration: underline;
@@ -260,21 +280,22 @@ nav {
 }
 
 .contacts-card {
-    background: linear-gradient(150deg, rgb(28, 219, 28), rgb(80, 80, 234));
+    background: linear-gradient(125deg, rgb(41, 175, 61), rgb(89, 62, 194));
     padding: var(--space-md);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
-    border-left: 5px solid #9271ff;
-    border-right: 5px solid #9271ff;
+    border-left: 4px solid rgb(27, 70, 225);
+    transition: transform 0.3s ease;
 }
 
 .contacts-card:hover {
-    background: linear-gradient(60deg, #5e6cd7, #3874e5);
+    transform: translateX(10px);
+    background: linear-gradient(125deg, rgb(33, 140, 49), rgb(75, 53, 164));
 }
 
 .contacts-card__name {
-    color: var(--color-main);
-    font-size: large;
+    color: var(--color-white);
+    font-size: 20px;
 }
 
 .contacts-card__text {
@@ -288,7 +309,7 @@ nav {
 }
 
 .goods__title {
-    color: var(--color-dark);
+    color: var(--color-light);
     text-decoration: underline;
     text-decoration-style: solid;
     margin-bottom: var(--space-md);
@@ -316,16 +337,23 @@ nav {
     margin-left: var(--space-md);
     margin-bottom: var(--space-md);
     border-radius: 3px solid var(--color-accent);
-    background: linear-gradient(50deg, rgb(94, 114, 200), rgb(239, 129, 70));
+    background: linear-gradient(150deg, rgb(28, 219, 28), rgb(80, 80, 234));
     border-radius: var(--radius);
     box-shadow: var(--shadow);
     height: auto;
     width: 400px;
+    transition: transform 0.3s ease;
+}
+
+.goods-card__info:hover {
+    transform: translateY(4px);
+    box-shadow: 1px 7px 15px rgba(0, 0, 0, 0.7);
 }
 
 .goods-card__name {
-    font-size: large;
-    color: var(--color-main);
+    font-size: 20px;
+    color: var(--color-light_white);
+    margin-bottom: var(--space-sm);
 }
 
 .goods-card__photo {
@@ -336,8 +364,9 @@ nav {
 }
 
 .goods-card__text {
-    font-size: medium;
-    color: var(--color-text);
+    font-size: 14px;
+    color: var(--color-light_white);
+    margin-bottom: var(--space-sm);
 }
 
 .goods__button {
@@ -348,42 +377,47 @@ nav {
     background: linear-gradient(135deg, #0868de, #5a1bd9);
     color: wheat;
     border-radius: 4px;
+    transition: transform 0.2s ease;
 }
 
-.goods__buttom:hover {
-    transform: translate3d(-2px);
-    box-shadow: 0 5px 15px rgba(236, 89, 16, 0.4);
+.goods__button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(55, 222, 97, 0.574);
 }
 
 .goods-card__discount {
-    font-size: medium;
-    color: #1D1D2E;
-    text-align: center;
+    font-size: 14px;
+    color: var(--color-light_white);
     text-decoration: line-through;
+    margin-bottom: var(--space-sm);
 }
 
 .goods-card__cart {
     font-weight: bold;
-    border: 4px solid red;
-    color: black;
+    border: 3px solid red;
     text-decoration-thickness: 50%;
     padding: var(--space-sm);
 }
 
-.goods-card_full_cart {
+.warn_title {
+    color: var(--color-white);
     text-align: center;
-    font-weight: bold;
-    border: 4px solid purple;
-    color: var(--color-main);
-    text-decoration-thickness: 70%;
-    padding: var(--space-sm);
+    margin-bottom: var(--space-sm);
+    font-size: 23px;
+    text-decoration: underline;
+}
+
+.warn_title_text {
+    color: var(--color-light_white);
+    text-align: justify;
+    margin-bottom: var(--space-sm);
+    font-size: 18px;
 }
 
 .goods__chosen {
-    color: #1D1D2E;
+    color: var(--color-light_white);
     text-decoration: line-through;
-    text-shadow: 3px 3px 3px rgba(109, 95, 237, 0.5);
-    text-rendering: auto;
+    text-shadow: 0 3px 2px rgba(240, 234, 184, 0.3);
 }
 
 .news {
@@ -393,7 +427,7 @@ nav {
 }
 
 .news__title {
-    color: var(--color-main);
+    color: var(--color-white);
     margin-bottom: var(--space-sm);
     text-decoration: underline;
     text-decoration-style: solid;
@@ -407,21 +441,25 @@ nav {
     padding: var(--space-md);
     margin-bottom: var(--space-md);
     box-shadow: var(--shadow);
-    border-left: 1rem solid rgb(234, 103, 46);
-    background: linear-gradient(40deg, #e7c21c, #ff9d00);
+    border-left: 5px solid rgb(27, 70, 225);
+    background: linear-gradient(125deg, rgb(41, 175, 61), rgb(89, 62, 194));
     border-radius: var(--radius);
 }
 
 .news-card__name {
-    color: var(--color-dark);
+    color: var(--color-light_white);
     margin-bottom: var(--space-sm);
-    text-decoration: underline;
-    text-decoration-style: wavy;
+    text-decoration: overline;
+}
+
+.news-card_time {
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: var(--space-md);
 }
 
 .news-card__text {
-    color: var(--color-main);
-    text-align: center;
+    color: var(--color-light);
+    text-align: justify;
     margin-bottom: var(--space-sm);
 }
 
@@ -434,8 +472,8 @@ nav {
 
 .news-cart__warning {
     font-weight: bold;
-    border: 2px solid red;
-    color: black;
+    border: 4px solid rgb(175, 213, 60);
+    color: var(--color-white);
     text-decoration-thickness: 50%;
 }
 
@@ -444,11 +482,10 @@ nav {
 }
 
 .practics_title {
-    color: var(--color-main);
+    color: var(--color-white);
     margin-bottom: var(--space-md);
-    font-size: 30px;
+    font-size: 28px;
     text-decoration: underline;
-    text-decoration-style: wavy;
 }
 
 .practics-card {
@@ -459,15 +496,14 @@ nav {
 
 .practics-card__info {
     padding: var(--space-md);
-    border-top: 5px solid greenyellow;
-    border-bottom: 5px solid greenyellow;
-    background: linear-gradient(30deg, rgb(246, 160, 160), rgb(249, 235, 162));
+    background: linear-gradient(125deg, rgb(41, 175, 61), rgb(89, 62, 194));
+    border-left: 5px solid rgb(27, 70, 225);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
 }
 
 .practics-card__name {
-    color: var(--color-text);
+    color: var(--color-light);
     margin-bottom: var(--space-md);
     text-decoration: overline;
 }
@@ -479,9 +515,9 @@ nav {
 }
 
 .practics-card__text {
-    color: var(--color-main);
+    color: var(--color-light_white);
     font-size: var(--space-md);
-    text-shadow: 3px 3px 2px rgb(0, 0, 0, 0.5);
+    text-shadow: 0px 3px 2px rgb(0, 0, 0, 0.5);
 }
 
 @media (max-width: 800px){
@@ -509,36 +545,13 @@ nav {
     height: 45px;
     width: 200px;
     cursor: pointer;
-    border: 2px solid #082cde;
+    border: 1px solid #082cde;
     background: linear-gradient(30deg, #082cde, #71a7e9);
     color: white;
     border-radius: 5px;
 }
 .c-button:hover {
     background: linear-gradient(30deg, #0524bd, #6493cc);
-}
-.c-button:focus {
-    outline: none;
-    box-shadow: 0 0 0 2px #5777bc;
-}
-
-#closeBtn {
-    padding: 8px 16px;
-    font-size: 14px;
-    cursor: pointer;
-    background-color: #ff4444;
-    color: white;
-    border: none;
-    border-radius: 5px;
-}
-        
-#closeBtn:focus {
-    outline: none;
-    box-shadow: 0 0 0 2px #ff6666;
-}
-        
-#closeBtn:hover {
-    background-color: #cc0000;
 }
 
 dialog::backdrop { 
@@ -551,11 +564,9 @@ dialog {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border: 2px solid #d9a31b; 
-    border-radius: 8px; 
+    border: 1px solid grey;
     padding: 20px;
-    background: linear-gradient(20deg, red, orange);
-    box-shadow: 0px 8px 10px rgba(240, 217, 13, 0.7); 
+    background-color: white;
     max-width: 500px; 
     width: 90vw; 
     max-height: 90vh; 
@@ -563,9 +574,9 @@ dialog {
 }
 
 .closeBtn {
-    background: linear-gradient(50deg, pink, purple);
+    background: linear-gradient(50deg, rgb(192, 136, 136), rgb(160, 142, 208));
     color: var(--color-light);
-    border: 2px solid rgb(99, 0, 99);
+    border: 2px solid rgb(160, 142, 208);
     border-radius: 3px;
     padding: 8px;
     margin-top: 10px;
@@ -627,7 +638,7 @@ dialog {
 .modal-actions { 
     display: flex; 
     gap: 1rem; 
-    justify-content: flex-end; 
+    justify-content: center; 
     margin-top: 2rem; 
 } 
 
@@ -643,7 +654,7 @@ dialog {
 
 .btn-primary { 
     background: linear-gradient(135deg, #65ef58 0%, #45c4d8 100%); 
-    color: #2c3e50; 
+    color: var(--color-accent); 
 } 
 
 .btn-primary:hover { 
@@ -653,11 +664,12 @@ dialog {
 
 .btn-secondary { 
     background: linear-gradient(135deg, #65ef58 0%, #45c4d8 100%); 
-    color: #2c3e50; 
+    color: var(--color-accent); 
 } 
 
 .btn-secondary:hover { 
-    background: linear-gradient(135deg, #45a83c 0%, #3698a7 100%); 
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
 } 
 
 .required { 
@@ -709,7 +721,12 @@ dialog {
 }
 
 .dark-theme_main {
-    background: linear-gradient(100deg, rgb(12, 12, 12), rgb(65, 66, 66));
+    background-image:url(../images/fon_for_dark_mode.gif);
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
 }
 
 .dark-theme_title {
@@ -718,6 +735,10 @@ dialog {
 
 .dark-theme_text {
     color: var(--color-white);
+}
+
+.dark_theme_footer {
+    background: linear-gradient(45deg, rgb(75, 75, 75), rgb(52, 49, 49));
 }
 
 .theme-toggle {

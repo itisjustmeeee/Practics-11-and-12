@@ -4,16 +4,14 @@ function toggleTheme() {
     const header = document.querySelector('.header');
     const nav = document.querySelector('.nav');
     const main = document.querySelector('main');
-    const titles = document.querySelectorAll('h1, h2');
-    const texts = document.querySelectorAll('p');
+    const footer = document.querySelector('.footer')
 
     const isDark = body.classList.toggle('dark-theme_back');
     if (page) page.classList.toggle('dark-theme_page');
     if (header) header.classList.toggle('dark-theme_header');
     if (nav) nav.classList.toggle('dark-theme_menu');
     if (main) main.classList.toggle('dark-theme_main');
-    titles.forEach(title => title.classList.toggle('dark-theme_title'));
-    texts.forEach(text => text.classList.toggle('dark-theme_text'));
+    if (footer) footer.classList.toggle('dark_theme_footer');
 
 
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
@@ -31,8 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector('.header');
     const nav = document.querySelector('.nav');
     const main = document.querySelector('main');
-    const titles = document.querySelectorAll('h1, h2');
-    const texts = document.querySelectorAll('p');
+    const footer = document.querySelector('.footer');
 
     if (theme === 'dark') {
         body.classList.add('dark-theme_back');
@@ -40,6 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (header) header.classList.add('dark-theme_header');
         if (nav) nav.classList.add('dark-theme_menu');
         if (main) main.classList.add('dark-theme_main');
+        if (footer) footer.classList.add('dark_theme_footer')
         titles.forEach(title => title.classList.add('dark-theme_title'));
         texts.forEach(text => text.classList.add('dark-theme_text'));
         document.querySelectorAll('.theme-toggle').forEach(button => {
@@ -51,8 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (header) header.classList.remove('dark-theme_header');
         if (nav) nav.classList.remove('dark-theme_menu');
         if (main) main.classList.remove('dark-theme_main');
-        titles.forEach(title => title.classList.remove('dark-theme_title'));
-        texts.forEach(text => text.classList.remove('dark-theme_text'));
+        if (footer) footer.classList.remove('dark_theme_footer');
         document.querySelectorAll('.theme-toggle').forEach(button => {
             button.textContent = 'Тёмная тема';
         });
