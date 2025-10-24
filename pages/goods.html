@@ -3,100 +3,222 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <title>Товары</title>
+    <style>
+         body {
+            background: url('../images/fon_for_pages.gif');
+            background-repeat: repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+    </style>
 </head>
-<body>
-    <div class="page">
-        <header class="header">
-            <h1 class = "header__title">Хэдер для моего Портфолио</h1>
+<body class = "bg-light">
+    <div class="container-fluid p-0">
+        <header class="bg-primary text-white py-4">
+            <div class = "container">
+                <div class = "row align-items-center">
+                    <div class = "col">
+                        <h1 class = "h3 mb-1">Хэдер для моего Портфолио</h1>
+                        <p class = "mb-0 opacity-75">Студент разработчик</p>
+                    </div>
+                    <div class = "col auto">
+                        <span class = "badge bg-light text-primary">ЭФБО-05-24</span>
+                    </div>
+                </div>
+            </div>
         </header>
-        <nav class="nav">
-            <ul class="nav__list">
-                <li class="nav__item"><a class="nav__link" href="../index.html">Главная</a></li>
-                <li class="nav__item"><a class="nav__link" href="news.html">Новости</a></li>
-                <li class="nav__item nav__item--active"><a class="nav__link" href="goods.html">Товары</a></li>
-                <li class="nav__item"><a class="nav__link" href="contacts.html">Контакты</a></li>
-                <li class="nav__item"><a class="nav__link" href="practics.html">Практики</a></li>
-            </ul>
+         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class = "container">
+                <button class = "navbar-toggler" type = "button" data-bs-toggle = "collapse" data-bs-target="#navbarNav">
+                    <span class = "navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id = "navbarNav">
+                    <ul class = "navbar-nav">
+                        <li class = "nav-item">
+                            <a class="nav-link" href="../index.html">
+                                <i class="bi bi-house me-1"></i>Главная
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="news.html">
+                                <i class="bi bi-folder-fill me-1"></i>Новости
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="goods.html">
+                                <i class="bi bi-bookmark-check-fill me-1"></i>Товары
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacts.html">
+                                <i class="bi bi-person-circle me-1"></i>Контакты
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href = "practics.html">
+                                <i class="bi bi-tools me-1"></i>Практички
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
-        <main class="goods">
-            <h1 class="goods__title">Разные товары</h1>
-            <section class="goods-card">
-                <div class="goods-card__info">
-                    <h2 class="goods-card__name">Товар 1</h2>
-                    <img class="goods-card__photo" src="../images/goods_1.jpg" alt="товарчик 1">
-                    <p class="goods-card__text">цена за этот кусок - 25 000 тыс. руб</p>
-                    <button class="goods__button" onclick="changeStyle(this)">Выбрать</button>
+        <main class="container my-5">
+            <section class="mb-5">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-light">
+                        <h1 class="card-title h2 text-center mb-0">
+                            <i class="bi bi-house text-primary"></i>
+                            Разные товары
+                        </h1>
+                    </div>
                 </div>
-                <div class="goods-card__info">
-                    <h2 class="goods-card__name">Товар 2</h2>
-                    <img class="goods-card__photo" src="../images/goods_2.jpg" alt="товар 2">
-                    <p class="goods-card__text">цена за это выше - 30 000 тыс. руб</p>
-                    <button class="goods__button" onclick="changeStyle(this)">Выбрать</button>
-                </div>
-                <div class="goods-card__info">
-                    <h2 class="goods-card__name">Товар 3</h2>
-                    <img class="goods-card__photo" src="../images/goods_3.jpg" alt="товар 3 owo">
-                    <p class="goods-card__discount">цена за это нечто - 100 000 тыс. руб</p>
-                    <button class="goods__button" onclick="changeStyle(this)">Выбрать</button>
+                <div class="card-body">
+                    <div class="row g-5">
+                        <div class="col-md-4">
+                            <div class="card shadow">
+                                <div class="card h-100">
+                                    <img src="../images/goods_1.jpg" class="card-img-top mx-auto d-block mt-3" alt="товарчик 1" style="height: 200px; width: 200px;">
+                                    <div class="card-body text-center">
+                                        <h4 class="card-title text-decoration-underline" data-title>Detroit Become Human</h4>
+                                        <p class="card-text small text-center" data-price>цена за этот кусок - 25 000 тыс. руб</p>
+                                        <button class="btn btn-info btn-outline-danger btn-sm" onclick="changeStyle(this)">Выбрать</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card shadow">
+                                <div class="card h-100">
+                                    <img src="../images/goods_2.jpg" class="card-img-top mx-auto d-block mt-3" alt="товар 2" style="height: 200px; width: 200px;">
+                                    <div class="card-body text-center">
+                                        <h4 class="card-title text-decoration-underline" data-title>Half Life (1 часть)</h4>
+                                        <p class="card-text small text-center" data-price>цена за это выше - 30 000 тыс. руб</p>
+                                        <button class="btn btn-info btn-outline-danger btn-sm" onclick="changeStyle(this)">Выбрать</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card shadow">
+                                <div class="card h-100">
+                                    <img src="../images/goods_3.jpg" class="card-img-top mx-auto d-block mt-3" alt="товар 3 owo" style="height: 200px; width: 200px;">
+                                    <div class="card-body text-center">
+                                        <h4 class="card-title text-decoration-line-through" data-title>Bioshock</h4>
+                                        <p class="card-text" data-price>цена за это нечто - 100 000 тыс. руб</p>
+                                        <button class="btn btn-info btn-outline-danger btn-sm" onclick="changeStyle(this)">Выбрать</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
-            <section class="goods-card_warnings">
-                <div class="goods-card__cart">
-                    <h2 class = "goods-card__text">Информация о скидках на сайте</h2>
-                    <p class = "goods-card__text">Внимание! Ни одна скидка не является перманентной. Максимальная скидка на товары - 10%. Продолжительность - 2 дня.</p>
-                </div>
-                <div class="goods-card_full_cart">
-                    <h2 class="goods-card__text">Корзина</h2>
-                    <p class = "goods-card__text">Следите за обновлениями. Будет добавлена корзина (или нет)</p>
+            <section class="mb-5">
+                <div class="card shadow">
+                    <div class="card-header bg-light">
+                        <h3 class="card-title h3 text-center mb-0">
+                            <i class="bi bi-bookmark-check-fill text-primary"></i>
+                            Предупреждения!!!
+                        </h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="border border-danger border-rounded border-2">
+                            Информация о скидках на сайте
+                            Внимание! Ни одна скидка не является перманентной. Максимальная скидка на товары - 10%. Продолжительность - 2 дня.
+                        </p>
+                        <p class="border border-info border-rounded border-3 text-center">
+                            Корзина
+                            Следите за обновлениями. Будет добавлена корзина (или нет)
+                        </p>
+                    </div>
                 </div>
             </section>
-            <section class="goods-card">
-                <button class="theme-toggle" onclick="toggleTheme()">Темная тема</button>
-            </section>
+            <button class="btn btn-primary btn-outline-warning" onclick="toggleTheme()">
+                <span id="themeText">Тема</span>
+            </button>
         </main>
-        <footer class="footer">
-            <p class="footer__text">&copy; 2025 Сайт для семестровой работыю Все права защищены</p>
+        <footer class="bg-dark text-white py-4 mt-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="mb-0">&copy; 2025 Сайт для семестровой работы. Все права защищены</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <a href="pages/contacts.html" class="text-white text-decoration-underline me-3">Контакты</a>
+                        <a href="#" class="text-white text-decoration-overline">Политика конфиденциальности</a>
+                    </div>
+                </div>
+            </div>
         </footer>
-        <dialog id = "messageDialog">
-            <p id = "dialogMessage"></p>
-            <button onclick="closeDialog()" class = 'closeBtn'>Закрыть</button>
-        </dialog>
+        <div class="modal fade" id="messageDialog" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title">Уведомление</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <p id="dialogMessage"></p>
+                </div>
+                <div class="modal-footer d-flex justify-content-center">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ОК</button>
+                </div>
+            </div>
+        </div>
     </div>
     <script>
-        function changeStyle(button){
-            const container = button.closest('.goods-card__info');
-            const dialog = document.getElementById('messageDialog');
-            const messageDialog = document.getElementById('dialogMessage');
-            if (!container) {
-                dialogMessage.textContent = "контейнер не найден";
-                dialog.showModal();
+        function changeStyle(button) {
+            const card = button.closest('.card');
+            const title = card.querySelector('[data-title]');
+            const price = card.querySelector('[data-price]');
+            const modal = new bootstrap.Modal(document.getElementById('messageDialog'));
+            const message = document.getElementById('dialogMessage');
+
+            if (!card || !title || !price) {
+                message.textContent = "Ошибка";
+                modal.show();
                 return;
             }
-            const text = container.querySelector(".goods-card__text, .goods-card__discount");
-            if (text){
-                if (text.classList.contains('goods__chosen')){
-                    text.classList.remove('goods__chosen');
-                    dialogMessage.textContent = 'Выбор отменен';
-                }
-                else {
-                    text.classList.add('goods__chosen');
-                    dialogMessage.textContent = "Товар выбран. Спасибо!";
-                }
-                dialog.showModal();
+
+            if (title.classList.contains('text-decoration-line-through')) {
+                title.classList.remove('text-decoration-line-through', 'opacity-50');
+                price.classList.remove('opacity-50');
+                message.textContent = "Выбор отменён";
+            } else {
+                title.classList.add('text-decoration-line-through', 'opacity-50');
+                price.classList.add('opacity-50');
+                message.textContent = "Товар выбран. Спасибо!";
             }
-            else {
-                dialogMessage.textContent = "Текст не найден";
-                dialog.showModal();
-            }
+
+            modal.show();
         }
 
-        function closeDialog() {
-            const dialog = document.getElementById('messageDialog');
-            dialog.close();
+        const themes = [
+            { name: "Светлая", gif: "../images/fon_for_pages.gif" },
+            { name: "Тёмная",  gif: "../images/fon_for_dark_mode.gif"  }
+        ];
+
+        let currentTheme = 0;
+
+        function toggleTheme() {
+            currentTheme = (currentTheme + 1) % themes.length;
+
+            document.body.style.backgroundImage = `url('${themes[currentTheme].gif}')`;
+
+            document.getElementById('themeText').textContent = `Тема: ${themes[currentTheme].name}`;
         }
+
+        window.onload = () => {
+            document.body.style.backgroundImage = `url('${themes[0].gif}')`;
+            document.getElementById('themeText').textContent = `Тема: ${themes[0].name}`;
+        };
     </script>
-    <script src="../scripts/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

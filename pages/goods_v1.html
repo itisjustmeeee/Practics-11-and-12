@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css">
+    <title>Товары</title>
+</head>
+<body>
+    <div class="page">
+        <header class="header">
+            <h1 class = "header__title">Хэдер для моего Портфолио</h1>
+        </header>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a class="nav__link" href="../index.html">Главная</a></li>
+                <li class="nav__item"><a class="nav__link" href="news.html">Новости</a></li>
+                <li class="nav__item nav__item--active"><a class="nav__link" href="goods.html">Товары</a></li>
+                <li class="nav__item"><a class="nav__link" href="contacts.html">Контакты</a></li>
+                <li class="nav__item"><a class="nav__link" href="practics.html">Практики</a></li>
+            </ul>
+        </nav>
+        <main class="goods">
+            <h1 class="goods__title">Разные товары</h1>
+            <section class="goods-card">
+                <div class="goods-card__info">
+                    <h2 class="goods-card__name">Detroit Become Human (Delux)</h2>
+                    <img class="goods-card__photo" src="../images/goods_1.jpg" alt="товарчик 1">
+                    <p class="goods-card__text">цена за этот кусок - 25 000 тыс. руб</p>
+                    <button class="goods__button" onclick="changeStyle(this)">Выбрать</button>
+                </div>
+                <div class="goods-card__info">
+                    <h2 class="goods-card__name">Half Life (1 часть)</h2>
+                    <img class="goods-card__photo" src="../images/goods_2.jpg" alt="товар 2">
+                    <p class="goods-card__text">цена за это выше - 30 000 тыс. руб</p>
+                    <button class="goods__button" onclick="changeStyle(this)">Выбрать</button>
+                </div>
+                <div class="goods-card__info">
+                    <h2 class="goods-card__name">Bioshock</h2>
+                    <img class="goods-card__photo" src="../images/goods_3.jpg" alt="товар 3 owo">
+                    <p class="goods-card__discount">цена за это нечто - 100 000 тыс. руб</p>
+                    <button class="goods__button" onclick="changeStyle(this)">Выбрать</button>
+                </div>
+            </section>
+            <section class="goods-card_warnings">
+                <div class="goods-card__cart">
+                    <h2 class="warn_title">Информация о скидках на сайте</h2>
+                    <p class="warn_title_text">Внимание! Ни одна скидка не является перманентной. Максимальная скидка на товары - 10%. Продолжительность - 2 дня.</p>
+                </div>
+                <div class="goods-card__cart">
+                    <h2 class = "warn_title">Корзина</h2>
+                    <p class = "warn_title_text">Следите за обновлениями. Будет добавлена корзина (или нет)</p>
+                </div>
+            </section>
+            <section class="goods-card">
+                <button class="theme-toggle" onclick="toggleTheme()">Тема</button>
+            </section>
+        </main>
+        <footer class="footer">
+            <p class="footer__text">&copy; 2025 Сайт для семестровой работыю Все права защищены</p>
+        </footer>
+        <dialog id = "messageDialog">
+            <p id = "dialogMessage"></p>
+            <button onclick="closeDialog()" class = 'closeBtn'>Закрыть</button>
+        </dialog>
+    </div>
+    <script>
+        function changeStyle(button){
+            const container = button.closest('.goods-card__info');
+            const dialog = document.getElementById('messageDialog');
+            const messageDialog = document.getElementById('dialogMessage');
+            if (!container) {
+                dialogMessage.textContent = "контейнер не найден";
+                dialog.showModal();
+                return;
+            }
+            const text = container.querySelector(".goods-card__text, .goods-card__discount");
+            if (text){
+                if (text.classList.contains('goods__chosen')){
+                    text.classList.remove('goods__chosen');
+                    dialogMessage.textContent = 'Выбор отменен';
+                }
+                else {
+                    text.classList.add('goods__chosen');
+                    dialogMessage.textContent = "Товар выбран. Спасибо!";
+                }
+                dialog.showModal();
+            }
+            else {
+                dialogMessage.textContent = "Текст не найден";
+                dialog.showModal();
+            }
+        }
+
+        function closeDialog() {
+            const dialog = document.getElementById('messageDialog');
+            dialog.close();
+        }
+    </script>
+    <script src="../scripts/script.js"></script>
+</body>
+</html>
